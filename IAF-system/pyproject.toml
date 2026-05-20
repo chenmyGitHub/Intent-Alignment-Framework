@@ -1,0 +1,20 @@
+[project]
+name = "iaf-core"
+version = "0.1.0"
+description = "Intent Alignment Framework — A formal specification for human-AI intent communication"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+smt = ["z3-solver>=4.12"]
+cli = ["click>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+include = ["iaf_core", "iaf_parser", "iaf_modules", "iaf_cli"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
